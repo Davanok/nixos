@@ -8,14 +8,9 @@
   ];
   
   imports = [
-    ./programs/niri/default.nix
-    ./programs/yazi/default.nix
-    ./programs/fish.nix
-    ./programs/git.nix
-    ./programs/foot.nix
-    ./programs/vscode.nix
+    ./programs/default.nix
     ./theme.nix
-    ./xdg.nix
     ./wallpapers.nix
+    ./xdg.nix
   ];
 }
