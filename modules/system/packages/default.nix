@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  imports = [
+    ./groups/default.nix
+  ];
+}
