@@ -8,11 +8,6 @@
 
 
   imports = [
-    ./packages/apps.nix
-    ./packages/cli.nix
-    ./packages/development.nix
-    ./packages/fonts.nix
-    ./packages/media.nix
-    ./packages/system.nix
+    ./packages/default.nix
   ];
 }

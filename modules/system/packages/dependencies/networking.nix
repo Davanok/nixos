@@ -2,11 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    foot
-    firefox
-    telegram-desktop
-    kdePackages.filelight
-    orca-slicer
+    sing-box
     nur.repos.wenjinnn.hiddify-next
   ];
 }

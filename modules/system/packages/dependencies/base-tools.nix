@@ -8,15 +8,9 @@
     zoxide
     _7zz-rar
     exiftool
-    yazi
-    
-    wl-clipboard-rs
-    cliphist
-
-    sing-box
-    platformio
-
     gcc
     tree
+    fastfetch
+    starship
   ];
 }

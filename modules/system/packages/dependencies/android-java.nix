@@ -2,11 +2,11 @@
 
 {
   environment.systemPackages = with pkgs; [
-    python313
-
     android-studio-full
     jdk17
     android-tools
+    platformio
+    python313
   ];
 
   environment.variables = {

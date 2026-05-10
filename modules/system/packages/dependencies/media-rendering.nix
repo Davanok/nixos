@@ -6,5 +6,6 @@
     poppler
     imagemagick
     resvg
+    orca-slicer
   ];
 }
