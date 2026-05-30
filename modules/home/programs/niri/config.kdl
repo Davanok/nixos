@@ -1,0 +1,44 @@
+include "environment.kdl"
+include "binds.kdl"
+include "rules.kdl"
+include "spawn.kdl"
+include "dms.kdl"
+
+screenshot-path "~/Pictures/Screenshots/screenshot_%s.png"
+prefer-no-csd
+
+input {
+    keyboard {
+        numlock
+        xkb {
+            layout "us,ru"
+            options "grp:win_space_toggle,compose:ralt"
+        }
+        repeat-delay 250
+        repeat-rate 50
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    focus-follows-mouse max-scroll-amount="50%"
+}
+
+layout {
+    gaps 16
+    center-focused-column "never"
+    always-center-single-column
+
+    default-column-width {
+        proportion 0.5
+    }
+}
+
+overview {
+    zoom 0.75
+    workspace-shadow {
+        off
+    }
+}

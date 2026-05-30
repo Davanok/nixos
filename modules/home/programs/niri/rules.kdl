@@ -1,0 +1,32 @@
+// Global corner radius rule
+window-rule {
+    clip-to-geometry true
+    geometry-corner-radius 16
+}
+
+// Dim inactive windows
+window-rule {
+    match is-active=false
+    opacity 0.95
+}
+
+// Picture-in-Picture & Discord Popouts
+window-rule {
+    match title="^(Picture in picture|Picture-in-Picture|Discord Popout)"
+    open-floating true
+    open-focused false
+    default-column-width { fixed 800; }
+    default-window-height { fixed 450; }
+    default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+// Notifications
+window-rule {
+    match title="^notificationtoast.*"
+    open-floating true
+    default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+layer-rule {
+    place-within-backdrop true
+}
