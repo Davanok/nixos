@@ -11,5 +11,6 @@
     ./niri/default.nix
     ./vscode.nix
     ./yazi/default.nix
+    ./fastfetch.nix
   ];
 }

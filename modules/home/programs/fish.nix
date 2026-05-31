@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, globals, ... }:
 let
-  flake-path = "/etc/nixos";
+  flake-path = "/home/${globals.username}/.nixos/";
 in {
   programs.fish = {
     enable = true;
@@ -13,7 +13,7 @@ in {
       nsb = "sudo nixos-rebuild build --flake ${flake-path}";
       nsboot = "sudo nixos-rebuild boot --flake ${flake-path}";
   
-      # rebuild + update flake
+      # update flake + rebuild
       nsu = "cd ${flake-path} && sudo nix flake update && sudo nixos-rebuild switch --flake .";
   
       # ===== Home Manager =====

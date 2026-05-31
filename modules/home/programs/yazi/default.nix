@@ -36,7 +36,7 @@ in {
 
     settings = {
         mgr = {
-          show_hidden = true;
+          show_hidden = false;
           sort_by = "natural";
           sort_sensitively = false;
           sort_dir_first = true;

@@ -6,7 +6,6 @@
     exiftool
     gcc
     tree
-    fastfetch
     duckdb
   ];
 }
