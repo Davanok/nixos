@@ -10,6 +10,7 @@
       platformio.platformio-vscode-ide
       jnoortheen.nix-ide
       ms-vscode.cpptools
+      ms-python.python
     ];
   };
 }

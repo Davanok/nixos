@@ -1,7 +1,12 @@
 { pkgs, globals, ... }:
 
 {
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
 
   hardware.bluetooth.enable = true;
 
@@ -32,6 +37,8 @@
     udev.packages = [
       pkgs.platformio-core
     ];
+
+    openvpn.servers = { };
   };
 
   security = {

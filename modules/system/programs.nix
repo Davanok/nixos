@@ -16,6 +16,7 @@
         enable = true;
         restartIfChanged = true;
       };
+      enableVPN = true;
     };
 
     java = {
