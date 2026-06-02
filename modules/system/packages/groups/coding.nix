@@ -1,14 +1,24 @@
 { pkgs, ... }:
 
-{
+let
+  vmoptions = ''
+-javaagent:${pkgs.jetbra}/ja-netfilter.jar=jetbrains
+--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
+--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
+  '';
+in {
   environment.systemPackages = with pkgs; [
     android-studio
     android-tools
     platformio
-    python313
 
-    jetbrains.pycharm
-    jetbrains.webstorm
+    python313
+    nodejs
+
+    (jetbrains.pycharm.override { vmopts = vmoptions; })
+    (jetbrains.webstorm.override { vmopts = vmoptions; })
+
+    claude-code
   ];
 
   environment.variables = {
