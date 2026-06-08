@@ -49,6 +49,8 @@ in {
       cd = "z";
 
       code = "codium";
+
+      tree = "ls -T";
     };
 
     shellInit = ''
