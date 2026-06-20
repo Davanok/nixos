@@ -17,11 +17,8 @@ in {
 
     (jetbrains.pycharm.override { vmopts = vmoptions; })
     (jetbrains.webstorm.override { vmopts = vmoptions; })
+    (jetbrains.datagrip.override { vmopts = vmoptions; })
 
     claude-code
   ];
-
-  environment.variables = {
-    PYCHARM_PYTHON_PATH = "${pkgs.python313}/bin/python3";
-  };
 }

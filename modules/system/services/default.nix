@@ -1,11 +1,12 @@
 { pkgs, globals, ... }:
 
 {
+  imports = [
+    # ./zapret.nix
+  ];
+
   networking.networkmanager = {
     enable = true;
-    plugins = with pkgs; [
-      networkmanager-openvpn
-    ];
   };
 
   hardware.bluetooth.enable = true;
@@ -38,7 +39,7 @@
       pkgs.platformio-core
     ];
 
-    openvpn.servers = { };
+    happ.enable = true;
   };
 
   security = {

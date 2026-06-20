@@ -8,6 +8,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
 
   outputs = { 

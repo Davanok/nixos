@@ -3,9 +3,9 @@
 {
   imports = [
     ./core/default.nix
-    ./packages.nix
+    ./packages/default.nix
+    ./services/default.nix
     ./programs.nix
-    ./services.nix
     ./shell.nix
     ./user.nix
   ];

@@ -3,17 +3,16 @@
 {
   environment.systemPackages = with pkgs; [
     sing-box
-    openvpn
   ];
 
-  networking.nameservers = [ 
-    "1.1.1.1"
-    "9.9.9.9" 
-    "https://dns.astracat.ru/dns-query"
-    "dns.astracat.ru"
-  ];
-
-  networking.extraHosts = ''
+  networking = {
+    nameservers = [ 
+      "1.1.1.1"
+      "9.9.9.9" 
+      "https://dns.astracat.ru/dns-query"
+      "dns.astracat.ru"
+    ];
+    extraHosts = ''
 # /etc/hosts
 # Generated from policy.dns
 
@@ -289,7 +288,6 @@
 
 77.239.114.0 patreon.com
 77.239.114.0 www.patreon.com
-
-77.239.114.0 cache.nixos.org
-  '';
+    '';
+  };
 }
