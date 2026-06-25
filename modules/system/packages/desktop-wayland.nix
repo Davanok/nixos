@@ -12,6 +12,5 @@
     polkit_gnome
     brightnessctl
     playerctl
-    bibata-cursors
   ];
 }

@@ -2,7 +2,7 @@
 
 let
   vmoptions = ''
--javaagent:${pkgs.jetbra}/ja-netfilter.jar=jetbrains
+-javaagent:${pkgs.jetbra}/jetbra/ja-netfilter.jar=jetbrains
 --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
   '';
@@ -15,11 +15,8 @@ in {
     python313
     nodejs
 
-#    (jetbrains.pycharm.override { vmopts = vmoptions; })
-#    (jetbrains.webstorm.override { vmopts = vmoptions; })
+    (jetbrains.pycharm.override { vmopts = vmoptions; })
+    (jetbrains.webstorm.override { vmopts = vmoptions; })
+    (jetbrains.datagrip.override { vmopts = vmoptions; })
   ];
-
-#  environment.variables = {
-#    PYCHARM_PYTHON_PATH = "${pkgs.python313}/bin/python3";
-#  };
 }

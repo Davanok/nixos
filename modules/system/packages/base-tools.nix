@@ -5,7 +5,6 @@
     _7zz-rar
     exiftool
     gcc
-    tree
     duckdb
   ];
 }

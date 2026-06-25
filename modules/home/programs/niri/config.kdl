@@ -31,14 +31,10 @@ layout {
     center-focused-column "never"
     always-center-single-column
 
-    default-column-width {
-        proportion 0.5
-    }
+    default-column-width { proportion 0.66667; }
 }
 
 overview {
     zoom 0.75
-    workspace-shadow {
-        off
-    }
+    workspace-shadow { off; }
 }

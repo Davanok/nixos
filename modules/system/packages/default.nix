@@ -1,7 +1,16 @@
-{ ... }:
+{ nixpkgs, pkgs, ... }:
 
 {
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
   imports = [
-    ./groups/default.nix
+    ./base-tools.nix
+    ./desktop-wayland.nix
+    ./coding.nix
+    ./media-rendering.nix
+    ./networking.nix
+    ./fonts.nix
   ];
 }
