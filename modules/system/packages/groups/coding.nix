@@ -15,13 +15,11 @@ in {
     python313
     nodejs
 
-    (jetbrains.pycharm.override { vmopts = vmoptions; })
-    (jetbrains.webstorm.override { vmopts = vmoptions; })
-
-    claude-code
+#    (jetbrains.pycharm.override { vmopts = vmoptions; })
+#    (jetbrains.webstorm.override { vmopts = vmoptions; })
   ];
 
-  environment.variables = {
-    PYCHARM_PYTHON_PATH = "${pkgs.python313}/bin/python3";
-  };
+#  environment.variables = {
+#    PYCHARM_PYTHON_PATH = "${pkgs.python313}/bin/python3";
+#  };
 }

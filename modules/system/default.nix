@@ -8,5 +8,6 @@
     ./services.nix
     ./shell.nix
     ./user.nix
+    ./disko.nix
   ];
 }

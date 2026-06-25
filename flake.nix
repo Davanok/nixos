@@ -8,12 +8,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self,
     nixpkgs, 
     home-manager,
+    disko,
     ... 
   } @inputs: let
     globals = {
@@ -29,6 +34,7 @@
 
       modules = [
         ./configuration.nix
+        disko.nixosModules.disko
       ];
     };
   };
